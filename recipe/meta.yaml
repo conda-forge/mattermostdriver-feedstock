@@ -1,5 +1,5 @@
 {% set name = "mattermostdriver" %}
-{% set version = "7.1.0" %}
+{% set version = "7.2.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3b9040503d553f1188ebbaf643de61d5bcf382037f083fbfa704d31c87c3aba7
+  sha256: 8c8ae694085a9149d395e95bb6a607f91f59d489f173574e536b250f04e4b6af
 
 build:
   number: 0
@@ -21,8 +21,8 @@ requirements:
     - python >=3.5
   run:
     - python >=3.5
-    - requests >=2.19
-    - websockets >=6
+    - requests >=2.25
+    - websockets >=8
 
 test:
   imports:
