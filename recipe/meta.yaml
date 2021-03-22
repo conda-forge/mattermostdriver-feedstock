@@ -21,8 +21,8 @@ requirements:
     - python >=3.5
   run:
     - python >=3.5
-    - requests >=2.19
-    - websockets >=6
+    - requests >=2.25
+    - websockets >=8
 
 test:
   imports:
