@@ -1,5 +1,5 @@
 {% set name = "mattermostdriver" %}
-{% set version = "7.3.0" %}
+{% set version = "7.3.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: eae957265f5d3aefef09f11db1ab9f6468ca74e5879646dc3a36b51ed465589e
+  sha256: bf629c4b8f825bd7196208aa93995ac5077bd60939ba67cca314a7f13c1dbcea
 
 build:
   number: 0
