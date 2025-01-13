@@ -7,27 +7,33 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 2e4d7b4a17d3013e279c6f993746ea18cd60b45d8fa3be24f47bc2de22b9b3b4
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.5
+    - python {{ python_min }}
+    - setuptools
   run:
-    - python >=3.5
+    - python >={{ python_min }}
     - requests >=2.25
     - websockets >=8
 
 test:
+  requires:
+    - python {{ python_min }}
+    - pip
   imports:
     - mattermostdriver
     - mattermostdriver.endpoints
+  commands:
+    - pip check
 
 about:
   home: https://github.com/Vaelor/python-mattermost-driver
